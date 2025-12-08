@@ -4,39 +4,189 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>iamlinked — Connecting Halal Businesses</title>
-  <meta name="description" content="A trusted platform for Muslim entrepreneurs in travel, real estate, SaaS & car industries — 100% halal, zero riba.">
+  <meta name="description" content="A trusted platform for Muslim entrepreneurs in travel, real estate, SaaS, car, prophetic medicine, modest fashion & more — 100% halal, zero riba.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕌</text></svg>">
   <style>
+    :root {
+      --primary: #1e40af;
+      --primary-dark: #1d4ed8;
+      --success: #047857;
+      --halal-green: #166534;
+      --gold: #d97706;
+      --cream: #fdf2f8;
+      --light: #f8fafc;
+      --gray-700: #374151;
+      --gray-500: #6b7280;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f8fafc; }
-    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-    header { text-align: center; padding: 4rem 0 2rem; }
-    h1 { font-size: 2.5rem; font-weight: 800; color: #1e40af; margin-bottom: 1rem; }
-    .subtitle { font-size: 1.2rem; color: #4b5563; max-width: 750px; margin: 0 auto; }
-    .highlight { background: #dbeafe; padding: 0.25rem 0.5rem; border-radius: 4px; }
-    .cta { margin: 3rem 0; text-align: center; }
-    .btn {
-      display: inline-block;
-      background: #1d4ed8; color: white; padding: 12px 32px;
-      border-radius: 8px; text-decoration: none; font-weight: 600;
-      transition: opacity 0.2s;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--gray-700);
+      background: var(--light);
+      overflow-x: hidden;
     }
-    .btn:hover { opacity: 0.9; }
-    .features {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.75rem; margin: 4rem 0;
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    .card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-    .card h3 { color: #1e40af; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; }
-    .card h3 svg { width: 20px; height: 20px; }
-    footer { text-align: center; padding: 3rem 0 2rem; color: #6b7280; font-size: 0.9rem; }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 3.5rem 0 2rem;
+    }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+    @media (min-width: 768px) { h1 { font-size: 2.8rem; } }
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--gray-700);
+      max-width: 780px;
+      margin: 0 auto 1.2rem;
+      line-height: 1.6;
+    }
+    .highlight {
+      background: #dbeafe;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    /* Halal Badge */
     .halal-badge {
-      display: inline-block; background: #dcfce7; color: #166534; padding: 6px 16px;
-      border-radius: 30px; font-size: 0.9rem; font-weight: 700; margin-top: 1rem;
-      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #dcfce7;
+      color: var(--halal-green);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 1.2rem auto 2rem;
+      box-shadow: 0 2px 6px rgba(22, 101, 52, 0.1);
     }
+    .halal-badge svg { width: 18px; height: 18px; }
+
+    /* Features Grid */
+    .section-title {
+      text-align: center;
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin: 2.5rem 0 1.8rem;
+      font-weight: 700;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 3rem;
+    }
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.75rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #f1f5f9;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.25rem;
+    }
+    .card p {
+      color: var(--gray-700);
+      font-size: 1.02rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: white;
+      border-radius: var(--radius);
+      padding: 2.5rem 1.5rem;
+      margin: 3rem 0;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .btn-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      max-width: 900px;
+      margin: 2rem auto 0;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 14px 20px;
+      border-radius: 10px;
+      color: white;
+      min-width: 150px;
+      transition: all 0.25s ease;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    }
+    .btn:hover {
+      opacity: 0.95;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.18);
+    }
+    .btn:active { transform: translateY(0); }
+
+    /* Button Colors */
+    .btn-re { background: #047857; }
+    .btn-car { background: #ea580c; }
+    .btn-web { background: #7c2d12; }
+    .btn-safar { background: #059669; }
+    .btn-tib { background: #854d0e; color: white; }
+    .btn-med { background: #c026d3; }
+    .btn-haya { background: #be185d; color: white; }
+    .btn-halal { background: #166534; }
+    .btn-ummah { background: #0c4a6e; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2.5rem 0 2rem;
+      color: var(--gray-500);
+      font-size: 0.95rem;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 2rem;
+    }
+    .footer-note {
+      display: block;
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--gray-500);
+    }
+
+    /* Responsive */
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
-      .features { grid-template-columns: 1fr; }
+      .subtitle { font-size: 1.1rem; }
+      .btn { padding: 12px 16px; font-size: 0.9rem; min-width: 130px; }
     }
   </style>
 </head>
@@ -46,39 +196,61 @@
       <h1>iamlinked</h1>
       <p class="subtitle">
         Connecting Muslim entrepreneurs in <span class="highlight">travel</span>, 
-        <span class="highlight">real estate</span>, <span class="highlight">SaaS</span>, and 
-        <span class="highlight">car industries</span> — 
-        ethically, transparently, and 100% <strong>halal</strong>.
+        <span class="highlight">real estate</span>, <span class="highlight">SaaS</span>, 
+        <span class="highlight">car</span>, <span class="highlight">prophetic medicine</span>, 
+        and <span class="highlight">modest fashion</span> — ethically, transparently, and 100% <strong>halal</strong>.
       </p>
-      <div class="halal-badge">✓ Riba-Free • ✓ Gharar-Free • ✓ Verified Collaboration</div>
+      <div class="halal-badge">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        ✓ Riba-Free • ✓ Gharar-Free • ✓ Scholar-Verified
+      </div>
     </header>
-
-    <div class="cta">
-      <a href="mailto:hello@iamlinked.com?subject=Join iamlinked" class="btn">Join the Waitlist</a>
-    </div>
 
     <section class="features">
       <div class="card">
         <h3>🕌 Travel</h3>
-        <p>Find halal-certified tour operators, ethical affiliates, and Muslim-friendly hosts.</p>
+        <p>Halal-certified tours, Umrah packages, and Muslim-friendly accommodations.</p>
       </div>
       <div class="card">
         <h3>🏡 Real Estate</h3>
-        <p>Connect with Shariah-compliant investors, developers, and rental managers.</p>
-      </div>
-      <div class="card">
-        <h3>💻 SaaS</h3>
-        <p>Resell & integrate halal-friendly tools — no interest, no haram APIs.</p>
+        <p>Shariah-compliant investments, Murabaha properties, and ethical developers.</p>
       </div>
       <div class="card">
         <h3>🚗 Car Industry</h3>
-        <p>Collaborate with halal lease-to-own providers, ethical dealers, and service networks.</p>
+        <p>Riba-free leasing, ethical dealers, and halal vehicle servicing.</p>
+      </div>
+      <div class="card">
+        <h3>🍯 Prophetic Medicine</h3>
+        <p>Pure honey, blackseed, camel milk, Ferula — verified by scholars of Ahlus-Sunnah.</p>
+      </div>
+      <div class="card">
+        <h3>🛡️ Modest Clothing</h3>
+        <p>Abayas, niqabs, hijabs, izar — sourced from righteous Muslim sellers.</p>
+      </div>
+      <div class="card">
+        <h3>💻 SaaS & Web</h3>
+        <p>Halal reseller tools, ethical tech, and Sunnah-aligned digital solutions.</p>
       </div>
     </section>
 
+    <div class="cta-section">
+      <h2 class="section-title">Explore by Focus Area</h2>
+      <div class="btn-grid">
+        <a href="https://re.iamlinked.com" class="btn btn-re">🏡 Real Estate</a>
+        <a href="https://car.iamlinked.com" class="btn btn-car">🚗 Car Industry</a>
+        <a href="https://web.iamlinked.com" class="btn btn-web">💻 SaaS & Web</a>
+        <a href="https://safar.iamlinked.com" class="btn btn-safar">✈️ Halal Travel</a>
+        <a href="https://tib.iamlinked.com" class="btn btn-tib">🍯 Prophetic Medicine</a>
+        <a href="https://med.iamlinked.com" class="btn btn-med">🌸 Skincare & Sunnah</a>
+        <a href="https://haya.iamlinked.com" class="btn btn-haya">🛡️ Modest Clothing</a>
+        <a href="https://halal.iamlinked.com" class="btn btn-halal">🌟 Halal Hub</a>
+        <a href="https://ummah.iamlinked.com" class="btn btn-ummah">🕌 Ummah Community</a>
+      </div>
+    </div>
+
     <footer>
       <p>© 2025 iamlinked.com — Empowering halal entrepreneurship, one trusted link at a time.</p>
-      <p><small>No ads • No tracking • Fully open & ethical</small></p>
+      <small class="footer-note">No ads • No tracking • Fully open & ethical • Verified by scholars of Ahlus-Sunnah wal-Jama’ah</small>
     </footer>
   </div>
 </body>
